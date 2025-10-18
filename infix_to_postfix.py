@@ -35,10 +35,11 @@ def infix_to_postfix(expression):
 expression = input("Enter Infix Expression : ")
 postfix = infix_to_postfix(expression)
 
-print("The expression that is stored in the list is :-")
+print("\nThe expression that is stored in the list is :-")
 print(list(expression))
 
-print("COnverted Postfix Expression : ", postfix)
+print("\nCOnverted Postfix Expression : ", postfix)
+
 
 
 

@@ -32,7 +32,8 @@ def infix_to_postfix(expression):
     return ''.join(output)
 
 
-expression = input("Enter infix expression: ")
+expression = input("Enter Infix Expression : ")
 postfix = infix_to_postfix(expression)
-print("Postfix expression:", postfix)
+print("COnverted Postfix Expression : ", postfix)
+
 

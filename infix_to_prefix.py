@@ -8,10 +8,16 @@ def precedence(operator):
     return 0
 
 def infix_to_prefix(expression):
-    
+
+    expression = expression[::-1]
+
+    expression = list(expression)
+    for i in range(len(expression)):
+        if expression[i] == '(':
+            expression[i] = ')'
+        elif expression[i] == ')':
+            expression[i] = '('
+    expression = "".join(expression)
+
     stack = []
     result = []
-
-    for char in expression:
-        if char.isalnum():
-            result.append()

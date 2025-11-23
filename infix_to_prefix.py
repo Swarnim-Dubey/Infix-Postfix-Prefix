@@ -7,4 +7,11 @@ def precedence(operator):
         return 3
     return 0
 
-def infix_to_prefix(expression)
+def infix_to_prefix(expression):
+    
+    stack = []
+    result = []
+
+    for char in expression:
+        if char.isalnum():
+            result.append()

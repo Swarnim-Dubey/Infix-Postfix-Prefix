@@ -21,3 +21,22 @@ def infix_to_prefix(expression):
 
     stack = []
     result = []
+
+    for char in expression:
+        if char.isalnum():
+            result.append(char)
+        elif char == '(':
+            stack.append(char)
+        elif char == ')':
+            while stack and stack[-1] != '(':
+                result.append(stack.pop())
+            stack.pop()
+        else:
+            while stack and precedence(stack[-1]) > precedence(char):
+                result.append(stack.pop())
+            if char == '^' and stack and precedence(stack[-1]) == precedence(char):
+                pass
+            else:
+                while stack and precedence(stack[-1]) >= precedence(char):
+                    result.append(stack.pop())
+            stack.append(char)

@@ -40,3 +40,13 @@ def infix_to_prefix(expression):
                 while stack and precedence(stack[-1]) >= precedence(char):
                     result.append(stack.pop())
             stack.append(char)
+    while stack:
+        result.append(stack.pop())
+        return "".join(result[::-1])
+    
+# input for the expression
+
+expression = input("Enter the infix expression : ")
+
+print(f"Infix Expression : {expression}")
+print(f"Prefix Expression : {infix_to_prefix(expression)}")
